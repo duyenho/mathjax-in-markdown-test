@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
 import NavBar from "./NavBar"
 
@@ -15,9 +16,24 @@ const Wrapper = styled.div`
 `
 
 export default ({ children }) => (
-  <Wrapper>
-    <GlobalStyle />
-    <NavBar />
-    {children}
-  </Wrapper>
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `
+  }
+      render={data => (
+      <Wrapper>
+        <GlobalStyle />
+        <NavBar />
+        <h1>{data.site.siteMetadata.title}</h1>
+        {children}
+      </Wrapper>
+    )}
+  />
 )

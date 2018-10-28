@@ -4,8 +4,7 @@ import Layout from "../components/Layout"
 
 export default ({ data }) => (
   <Layout>
-    <h1>About {data.site.siteMetadata.title} </h1>
-    <p>Lorem ipsum dolor</p>
+    <p>{data.site.siteMetadata.title} is an experiment to render markdown files with embedded maths equations in a React app.</p>
   </Layout>
 )
 
