@@ -1,6 +1,5 @@
 ---
 title: "Some Topic C"
-slug: "/topic-c/"
 order: "1"
 group: "B"
 ---
