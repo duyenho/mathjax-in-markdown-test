@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
 import NavBar from "./NavBar"
+import NavTopics from "./NavTopics"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -9,10 +10,18 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Wrapper = styled.div`
+const LayoutWrapper = styled.div`
   max-width: 960px;
   margin: 0 auto;
   background-color: mistyRose;
+`
+
+const MainWrapper = styled.main`
+  display: flex;
+`
+
+const Main = styled.main`
+  width: 70%;
 `
 
 export default ({ children }) => (
@@ -28,12 +37,19 @@ export default ({ children }) => (
     `
   }
       render={data => (
-      <Wrapper>
+      <LayoutWrapper>
         <GlobalStyle />
-        <NavBar />
-        <h1>{data.site.siteMetadata.title}</h1>
-        {children}
-      </Wrapper>
+        <header>
+          <NavBar />
+        </header>
+        <MainWrapper>
+          <NavTopics />
+          <Main>
+            <h1>{data.site.siteMetadata.title}</h1>
+            {children}
+          </Main>
+        </MainWrapper>
+      </LayoutWrapper>
     )}
   />
 )
