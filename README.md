@@ -17,7 +17,7 @@ What is the best way to render markdown files with maths equations in a React ap
 - As a test, the MathJax script was added to the document head via `react-helmet` and will only format the equations on hard refresh > somewhat expected
 - The limitation of `gatsby-transformer-remark` is that it parses the markdown as one html string
 - Currently the string is being rendered via `dangerouslySetInnerHTML` which I'm told is bad practice, even though everyone does it :P
-- A solution is to split the `html` string into an array of tags, accoutn for the enter keys, add class hooks to the maths equations render them via `react-mathjax2` .. _or_ write a new parser
+- A solution is to split the `html` string into an array of tags, account for the enter keys, add class hooks to the maths equations render them via `react-mathjax2` .. _or_ write a new parser
 
 ### Getting Started
 1. Clone the repo
