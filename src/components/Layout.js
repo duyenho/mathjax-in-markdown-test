@@ -1,9 +1,9 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
+import { Helmet } from "react-helmet";
 import NavBar from "./NavBar"
 import NavTopics from "./NavTopics"
-
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -38,6 +38,11 @@ export default ({ children }) => (
   }
       render={data => (
       <LayoutWrapper>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Test ja</title>
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+        </Helmet>
         <GlobalStyle />
         <header>
           <NavBar />
