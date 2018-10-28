@@ -20,7 +20,7 @@ const groupBy = (filesArray, property) => {
 const makePageLinks = (files) => files.map((file, i) => {
   return (
     <li key={i}>
-      <Link to={'/'}>
+      <Link to={file.node.frontmatter.slug}>
         {file.node.frontmatter.title}
       </Link>
     </li>
@@ -42,6 +42,7 @@ export default ({ children }) => (
               id
               frontmatter {
                 title
+                slug
                 order
                 group
               }

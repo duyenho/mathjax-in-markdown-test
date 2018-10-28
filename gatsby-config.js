@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `MathJax in Markdown Test`,
+    title: `MathJax in Markdown Rendering Test`,
   },
   plugins: [
     {

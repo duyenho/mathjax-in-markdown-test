@@ -1,5 +1,6 @@
 ---
 title: "Some Topic A"
+slug: "/topic-a/"
 order: "2"
 group: "A"
 ---
