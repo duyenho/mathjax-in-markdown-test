@@ -1,6 +1,6 @@
 ---
 title: "Some Topic C"
-order: "1"
+order: "3"
 group: "B"
 ---
 

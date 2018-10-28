@@ -42,7 +42,6 @@ export default ({ children }) => (
               id
               frontmatter {
                 title
-                slug
                 order
                 group
               }
